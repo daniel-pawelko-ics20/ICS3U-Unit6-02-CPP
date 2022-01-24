@@ -29,7 +29,7 @@ int main() {
 
     // add up arr/process
     for (int num = 0; num < 10; num++) {
-        cout << "The random number " << num + 1 << " is: " << arr[num] << endl;
+        cout << "The random number is: " << arr[num] << endl;
         if (arr[num] > biggest) {
             biggest = arr[num];
         }
