@@ -10,6 +10,20 @@
 using std::cout;
 using std::endl;
 
+int find_biggest(int arr[10]) {
+    // finding biggest number
+    int biggest = 0;
+
+    for (int num = 0; num < 10; num++) {
+        if (arr[num] > biggest) {
+            biggest = arr[num];
+        }
+    }
+
+    // return biggest
+    return biggest;
+}
+
 int main() {
     // main function for max number
 
@@ -20,24 +34,16 @@ int main() {
 
     // defining variables
     int arr[10];
-    int biggest = 0;
 
     // create array with 10 random numbers/process
     for (int rand = 0; rand < 10; rand++) {
         arr[rand] = distr(eng);
+        cout << "The random number is: " << arr[rand] << endl;
     }
 
-    // add up arr/process
-    for (int num = 0; num < 10; num++) {
-        cout << "The random number is: " << arr[num] << endl;
-        if (arr[num] > biggest) {
-            biggest = arr[num];
-        }
-    }
-
-    // output
+    // output/calling function
     cout << endl;
-    cout << "Biggest number is " << biggest << endl;
+    cout << "Biggest number is " << find_biggest(arr) << endl;
 
     // output finished
     cout << endl;
